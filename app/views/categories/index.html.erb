@@ -1,12 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Categories</h1>
 
-<table>
+<p>
+  <%= link_to 'New Category', new_category_path, class: 'btn btn-primary' %>
+</p>
+
+<table class="table table-striped table-hover table-bordered">
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -14,14 +16,13 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td>
+          <%= link_to 'Edit', edit_category_path(category) %>
+          <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Category', new_category_path %>
