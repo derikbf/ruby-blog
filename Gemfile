@@ -11,7 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem "simple_form", "~> 5.1"
 gem "kaminari", "~> 1.2"
-
+gem "devise", "~> 4.8"
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -29,6 +29,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem "letter_opener", "~> 1.7"
 end
 
 group :test do
