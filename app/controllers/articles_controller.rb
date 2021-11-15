@@ -1,18 +1,26 @@
 class ArticlesController < ApplicationController
+  include Paginable
+
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit update destroy]
   
   def index
+    category = Category.find_by_name(params[:category]) if params[:category].present?                         
     # se tiver um parametro vindo na url chamado page, vou usar ele, se não tiver
     # tem o OU, vai colocar o 1
-    @highlights = Article.desc_order.first(3)
+    @highlights = Article.filter_by_category(category)
+                         .desc_order
+                         .first(3)
 
-    current_page = (params[:page] || 1).to_i
+
     highlight_ids = @highlights.pluck(:id).join(',')
 
     @articles = Article.without_highlights(highlight_ids)
+                       .filter_by_category(category)
                        .desc_order                       
                        .page(current_page)
+
+    @categories = Category.sorted
   end
 
   # Article/Show 
