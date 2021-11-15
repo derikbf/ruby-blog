@@ -14,6 +14,8 @@ gem "kaminari", "~> 1.2"
 gem "devise", "~> 4.8"
 gem "pundit", "~> 2.1"
 gem 'rolify'
+gem 'pry', '~> 0.13.1'
+gem 'groupdate'
 
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
