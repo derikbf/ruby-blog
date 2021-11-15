@@ -9,13 +9,9 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
-gem "simple_form", "~> 5.1"
-gem "kaminari", "~> 1.2"
-gem "devise", "~> 4.8"
-gem "pundit", "~> 2.1"
-gem 'rolify'
-gem 'pry', '~> 0.13.1'
-gem 'groupdate'
+gem 'bootsnap', '>= 1.4.4', require: false
+gem 'exception_notification'
+
 
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -23,7 +19,6 @@ gem 'groupdate'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -45,3 +40,11 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "simple_form", "~> 5.1"
+gem "kaminari", "~> 1.2"
+gem "devise", "~> 4.8"
+gem "pundit", "~> 2.1"
+gem 'rolify'
+gem 'pry', '~> 0.13.1'
+gem 'groupdate'

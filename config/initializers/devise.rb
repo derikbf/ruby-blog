@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '1435d70a8f159dce2d2982ddc3a13f116cd1dcbee7562d6e55912915f39bea8d8143f7397c7db9b1d284e991fff8b8c7bfc8bb9a4fb309c51639ed6e351265b0'
+  # config.secret_key = 'b56353ce42881262126065fdd0a8d42ee4c5ed33e18e4be05ff132c9f2967dd5d7ceb08359eb069fdbafb0d36a2a0acc34d95af08ca26bcafc7f1d8a03f11283'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,7 +24,11 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'devise@example.com'
+  config.mailer_sender = if Rails.env.production?
+                           Rails.application.credentials.gmail[:mailer_sender]
+                         else
+                           'devise@example.com'
+                         end
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -126,7 +130,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'afaa50db8e310f4f5af3738a9105dbb977cc3315fedf2e71e65ab1a924e7a7f39f32d791fc9fcc90651417e0c60c53d084700aad50d21ba28a04791a2559bc21'
+  # config.pepper = 'fa11303d5c6e1b1f68c2200aef12215e56dcc384e9ef0613e679cdb03bcdfa6c5a792cccdcde812a58258b25c1945a767d589a829443bd2934da818c1686e463'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -157,7 +161,7 @@ Devise.setup do |config|
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
   # db field (see migrations). Until confirmed, new email is stored in
   # unconfirmed_email column, and copied to email column on successful confirmation.
-  config.reconfirmable = false
+  config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [:email]
@@ -308,5 +312,4 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-  config.mailer_sender = 'andy@example.com'
 end

@@ -1,21 +1,21 @@
-<%= render_if @highlights[0].present?, 'longer_featured', article: @highlights[0]  %>
+<%= render_if @highlights[0].present?, 'longer_featured', article: @highlights[0] %>
 
 <div class="row mb-2">
-  <%= render_if @highlights[1].present?, 'medium_featured', article: @highlights[1]  %>
-  <%= render_if @highlights[2].present?, 'medium_featured', article: @highlights[2]  %>
+  <%= render_if @highlights[1].present?, 'medium_featured', article: @highlights[1] %>
+  <%= render_if @highlights[2].present?, 'medium_featured', article: @highlights[2] %>
 </div>
 
 <div class="row g-5">
   <div class="col-md-8">
     <h3 class="pb-4 mb-4 fst-italic border-bottom">
-     From my Experience
+      From my Experience
     </h3>
-    
+
     <p>
-      <%= link_to 'New Article', new_article_path, 
+      <%= link_to 'New Article', new_article_path,
                   class: 'btn btn-success' if user_signed_in? %>
     </p>
-    
+
     <%= render @articles %>
 
     <%= render 'pagination' %>
@@ -29,7 +29,7 @@
     <nav class="nav d-flex justify-content-between">
       <% @categories.each do |category| %>
         <%= link_to category.name, articles_path(category: category.name),
-          class: "p-2 link-secondary #{'filter-active' if category.name.to_s == params[:category]}" %>
+            class: "p-2 link-secondary #{'filter-active' if category.name.to_s == params[:category]}" %>
       <% end %>
     </nav>
   </div>

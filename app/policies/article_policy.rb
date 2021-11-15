@@ -14,10 +14,10 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def update?
-    user&.id = record.user.id
+    user&.id == record.user.id
   end
 
   def destroy?
-    user&.id = record.user.id
+    user&.id == record.user.id
   end
 end
