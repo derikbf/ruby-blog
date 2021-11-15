@@ -1,7 +1,7 @@
 class CategoryPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      if user.admin?
+      if user.admin? || user.has_role?(:moderator)
         scope.all
       else
         raise Pundit::NotAuthorizedError
@@ -9,15 +9,15 @@ class CategoryPolicy < ApplicationPolicy
     end
   end
 
-  def index?
+  def index? || user.has_role?(:moderator)
     user&.admin?
   end
 
-  def create?
+  def create? || user.has_role?(:moderator)
     user.admin?
   end
 
-  def update?
+  def update? || user.has_role?(:moderator)
     user.admin?
   end
 
