@@ -141,6 +141,8 @@ GEM
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    paranoia (2.4.3)
+      activerecord (>= 4.0, < 6.2)
     pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -268,6 +270,7 @@ DEPENDENCIES
   kaminari (~> 1.2)
   letter_opener (~> 1.7)
   listen (~> 3.3)
+  paranoia
   pg (~> 1.1)
   pry (~> 0.13.1)
   puma (~> 5.0)

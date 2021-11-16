@@ -48,3 +48,4 @@ gem 'rolify'
 gem 'pry', '~> 0.13.1'
 gem 'groupdate'
 gem 'pg', '~> 1.1', group: :production
+gem 'paranoia'
