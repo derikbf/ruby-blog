@@ -1,7 +1,7 @@
 Article.delete_all
 
 p 'criando admin'
-User.create(email: "admin@admin", password: 'Admin@123')
+User.create(email: "admin@admin", password: 'Admin@123', admin: true)
 p 'finaliznado admin'
 
 
