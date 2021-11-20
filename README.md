@@ -2,7 +2,11 @@
 
 Building a blog using Bootstrap 5 with Ruby on Rails 6 in MVC pattern.
 
+Obs: this blog was focused on studies in Ruby on Rails, mainly on the backend, with no effort on the frontend.
+
 This repository is part of the [Curso Ruby on Rails 6 MVC](https://www.youtube.com/watch?v=rCwMlbpC7dU) on YouTube. Professor Paulo Eduardo Melo.
+
+<h3>👨‍💻 Technologies Used</h3>
 
 <table>
   <tr>
@@ -19,8 +23,18 @@ This repository is part of the [Curso Ruby on Rails 6 MVC](https://www.youtube.c
   </tr>
   <tr>
     <td>Database</td>
+    <td> PostgreSQL - Gem 1.1</td>
     <td>
-      PostgreSQL
+      https://www.postgresql.org/docs/
+    </td>
+  </tr>
+    <tr>
+    <td>Bootstrap</td>
+    <td>
+      5
+    </td>
+    <td>
+      https://getbootstrap.com/docs/5.1/getting-started/introduction/
     </td>
   </tr>
 </table>
@@ -54,7 +68,7 @@ rails s
 ```
 
 Open the browser at the address `http://localhost:3000`
-
+Open the browser at the address [https://ruby-blogstrap.herokuapp.com/](https://ruby-blogstrap.herokuapp.com/)
 ## Configuration for Production
 
 ```bash
@@ -88,3 +102,21 @@ To configure [Exception Notification](https://github.com/smartinez87/exception_n
 `config/initializers/exception_notification.rb`.
 
 Open the browser at the address [https://ruby-blog.herokuapp.com](https://ruby-blog.herokuapp.com)
+
+## Developed features:
+- System admin
+- User registration
+- Authentication (gem devise)
+- Authorization system (gem pundit)
+- Post Creation
+- Comment Creation
+- Category creation and filtering
+- Paging (gem kaminari)
+- Archives (monthly display with number of posts)
+- Filter by period
+- Best practices (avoiding N+1 queries)
+- I18n
+<br/><br/>
+
+<!-- GIF -->
+<!-- <p align="center"><img src="./app/assets/images/ruby-blog-network.gif" title="Ruby - Blog"></p> -->
