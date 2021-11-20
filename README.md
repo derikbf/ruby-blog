@@ -119,4 +119,4 @@ Open the browser at the address [https://ruby-blog.herokuapp.com](https://ruby-b
 <br/><br/>
 
 <!-- GIF -->
-<!-- <p align="center"><img src="./app/assets/images/ruby-blog-network.gif" title="Ruby - Blog"></p> -->
+<p align="center"><img src="./app/assets/images/ruby-blog.gif" title="Ruby - Blog"></p>
