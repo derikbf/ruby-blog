@@ -34,4 +34,4 @@ Category.all.each do |category|
   end
 end
 
-p 'Finalizando ...'
+p 'Finalizando ...' 
