@@ -24,17 +24,11 @@ This repository is part of the [Curso Ruby on Rails 6 MVC](https://www.youtube.c
   <tr>
     <td>Database</td>
     <td> PostgreSQL - Gem 1.1</td>
-    <td>
-      https://www.postgresql.org/docs/
-    </td>
   </tr>
     <tr>
     <td>Bootstrap</td>
     <td>
       5
-    </td>
-    <td>
-      https://getbootstrap.com/docs/5.1/getting-started/introduction/
     </td>
   </tr>
 </table>
