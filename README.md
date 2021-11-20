@@ -109,7 +109,7 @@ Open the browser at the address [https://ruby-blog.herokuapp.com](https://ruby-b
 - Archives (monthly display with number of posts)
 - Filter by period
 - Best practices (avoiding N+1 queries)
-- I18n
+- I18n (under construction)
 <br/><br/>
 
 <!-- GIF -->
